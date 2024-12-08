@@ -1,0 +1,21 @@
+﻿using Microsoft.EntityFrameworkCore;
+using webapi_Produtos.Models.Produto;
+
+namespace webapi_Produtos.Data
+{
+    public class AppDbContext : DbContext
+    {
+
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        {
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<ProdutoModel>().HasKey(p => p.Id);
+        }
+
+        public DbSet<ProdutoModel> Produtos { get; set; }
+    }
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>webapi_Produtos</name>
+    </assembly>
+    <members>
+        <member name="M:webapi_Produtos.Controllers.ProdutoController.GetAll">
+            <summary>
+            Obtem todos os produtos cadastrados
+            </summary>
+            <returns>Lista de Produtos cadastrados</returns>
+        </member>
+        <member name="M:webapi_Produtos.Controllers.ProdutoController.GetProdutoById(System.Int32)">
+            <summary>
+            Obter produto através do ID.
+            </summary>
+            <param name="id">ID do Produto</param>
+            <returns>Produto com ID determinado</returns>
+        </member>
+        <member name="M:webapi_Produtos.Controllers.ProdutoController.GetProdutoByName(System.String)">
+            <summary>
+            Busca produtos com determinado nome ou parte do nome.
+            </summary>
+            <param name="nome">Termo de busca</param>
+            <returns>Lista de produtos com nome completo ou parte dele.</returns>
+        </member>
+        <member name="M:webapi_Produtos.Controllers.ProdutoController.AdicionarNovoProduto(webapi_Produtos.Models.Produto.ProdutoRequest)">
+            <summary>
+            Cria um novo produto
+            </summary>
+            <param name="produto">Corpo do novo produto</param>
+            <returns>Retorna o produto adicionado.</returns>
+        </member>
+        <member name="M:webapi_Produtos.Controllers.ProdutoController.AtualizarEstoqueProdutoById(System.Int32,webapi_Produtos.Models.Produto.ProdutoEstoqueRequest)">
+            <summary>
+            Atualiza o estoque de um produto
+            </summary>
+            <param name="id">ID do produto com o estoque a ser atualizado</param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi_Produtos.Controllers.ProdutoController.GetProdutosDisponiveisEmEstoque">
+            <summary>
+            Obtem lista de produtos em estoque
+            </summary>
+            <returns>Lista de Produtos com Estoque disponível.</returns>
+        </member>
+        <member name="M:webapi_Produtos.Controllers.ProdutoController.RemoverProdutoPorId(System.Int32)">
+            <summary>
+            Remove um produto.
+            </summary>
+            <param name="id">ID do produto a ser removido.</param>
+            <returns>Lista de Produtos atualizada após remoção.</returns>
+        </member>
+    </members>
+</doc>
